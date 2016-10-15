@@ -11,10 +11,6 @@ footer {
   padding: 15px;
 }
 
-.row.content {
-  height: 1500px
-}
-
 .sidenav {
   background-color: black;
   color: darkgray;
@@ -27,4 +23,5 @@ footer {
   float: right;
   width: 80%;
   padding-left: 15px;
+  padding-right: 15px;
 }

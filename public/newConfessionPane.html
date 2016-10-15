@@ -1,35 +1,40 @@
 <h3> New Confession </h3>
 <hr />
 
-<div class="container">
-  <div>
+<div>
+  <div class="col-md-6">
     <p>
       <label>Confession (required)</label> 
-      <input id="name" class="form-control" type="text" ng-model="confession.confession" required> 
+      <textarea class="form-control" rows="5" ng-model="confession.confession" required></textarea> 
     </p>
     <p>
-      <label>Anonymous (required)</label> 
-      <input id="name" class="form-control" type="text" ng-model="confession.anonymous" required> 
+      <label>Post Confession as Anonymous (required)</label>
+      <label class="radio-inline">
+        <input type="radio" name="anonymous" value="Yes" ng-model="confession.anonymous" checked required> Yes 
+      </label>
+      <label class="radio-inline">
+        <input type="radio" name="anonymous" value="No" ng-model="confession.anonymous" required> No
+      </label> 
     </p>
     <p>
       <label>First Name</label> 
-      <input id="name" class="form-control" type="text" ng-model="confession.firstName"> 
+      <input class="form-control" type="text" ng-model="confession.firstName"> 
     </p>
     <p>
       <label>Last Name</label> 
-      <input id="name" class="form-control" type="text" ng-model="confession.lastName"> 
+      <input class="form-control" type="text" ng-model="confession.lastName"> 
     </p>
     <p>
       <label>Email</label> 
-      <input id="name" class="form-control" type="text" ng-model="confession.email"> 
+      <input class="form-control" type="text" ng-model="confession.email"> 
     </p>
     <p>
       <label>City</label> 
-      <input id="name" class="form-control" type="text" ng-model="confession.city"> 
+      <input class="form-control" type="text" ng-model="confession.city"> 
     </p>
     <p>
       <label>Country</label> 
-      <input id="name" class="form-control" type="text" ng-model="confession.country"> 
+      <input class="form-control" type="text" ng-model="confession.country"> 
     </p>
     <p>
       <button style="margin-top:20px" class="btn btn-default" ng-click="saveConfession(confession)">Save</button>
