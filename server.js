@@ -38,6 +38,13 @@ function handleError(res, reason, message, code) {
 }
 
 app.get("/confessions", function(req, res) {
+    db.collection(CONFESSIONS_COLLECTION).find({}).toArray(function(err, docs) {
+    if (err) {
+      handleError(res, err.message, "Failed to get contacts.");
+    } else {
+      res.status(200).json(docs);
+    }
+  });
 });
 
 /*
