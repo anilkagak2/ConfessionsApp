@@ -1,0 +1,12 @@
+<h3> Recent Confessions </h3>
+<hr />
+
+<div class="container">
+      <div ng-repeat="confession in confessions | orderBy:'createDate'">
+          <p>
+             <label>Confession:</label>
+             <br/>
+             {{ confession.confession }}
+          </p>
+      </div>
+</div>
