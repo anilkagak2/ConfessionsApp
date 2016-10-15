@@ -3,10 +3,17 @@
 
 <div>
       <div ng-repeat="confession in confessions | orderBy:'createDate'">
-          <p>
-             <label>Confession:</label>
-             <br/>
-             {{ confession.confession }}
-          </p>
+          <div class="confession">
+            <div>
+                 <span class="glyphicon glyphicon-time"></span> 
+                 {{ confession.createDate | date:"hh:mm a, d MMM '''' yyyy"}} 
+            </div>
+            <div> {{ (!confession.city || confession.city=="") ? "" : confession.city + "," }} {{ confession.country }}</div> <br/>
+            <blockquote>
+            <p> {{ confession.confession }} </p>
+            <footer> {{ (!confession.anonymous || confession.anonymous=='No') ? "Anonymous": confession.firstName + " " + confession.lastName }} </footer>
+            <br/>
+            </blockquote>
+          </div>
       </div>
 </div>
